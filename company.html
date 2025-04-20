@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Компании</title>
+  <link rel="stylesheet" href="styles/company.css">
+</head>
+<body>
+
+  <div class="company-container">
+    <h1>Компании</h1>
+
+  <div class="toolbar">
+    <input type="text" id="searchInput" placeholder="Поиск по компаниям...">
+      <select id="statusFilter">
+        <option value="all">Все</option>
+        <option value="Активна">Активна</option>
+        <option value="На паузе">На паузе</option>
+      </select>
+    <button id="addCompanyBtn">+ Добавить</button>
+  </div>
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Название</th>
+          <th>Контакт</th>
+          <th>Статус</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody id="companyTable">
+        <!-- Данные вставляются через JS -->
+      </tbody>
+    </table>
+  </div>
+
+
+<!-- Firebase SDK (compat) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+
+<!-- Firebase config и инициализация -->
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDH9UD6fB8IYJpFZ_f97sz5hYTKHPDH504",
+    authDomain: "verifix-crm.firebaseapp.com",
+    databaseURL: "https://verifix-crm-default-rtdb.firebaseio.com",
+    projectId: "verifix-crm",
+    storageBucket: "verifix-crm.appspot.com",
+    messagingSenderId: "1059130411540",
+    appId: "1:1059130411540:web:68dc218a974bac1d61f501",
+    measurementId: "G-8SM7Y7TZCL"
+  };
+
+  // ⚠️ ВАЖНО: этот вызов должен быть до company.js
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<!-- Подключаем ЛОГИКУ ПОСЛЕ инициализации -->
+<script src="scripts/company.js"></script>
+
+</body>
+</html>

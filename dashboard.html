@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Дашборд</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      padding: 30px;
+    }
+    .chart {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .chart h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section class="chart">
+    <h3>Диаграмма по активным компаниям</h3>
+    <canvas id="companyChart" width="300" height="300"></canvas>
+  </section>
+
+  <script>
+    const ctx = document.getElementById("companyChart").getContext("2d");
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: ["Verifix", "Makro", "Darmon Servis"],
+        datasets: [{
+          data: [50, 30, 20],
+          backgroundColor: ["#4e73df", "#1cc88a", "#f6c23e"],
+          hoverOffset: 10
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            position: "bottom"
+          }
+        },
+        cutout: "60%"
+      }
+    });
+  </script>
+</body>
+</html>

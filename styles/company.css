@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  padding: 30px;
+}
+
+.company-container {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.toolbar input {
+  width: 60%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.toolbar button {
+  padding: 8px 16px;
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.toolbar select {
+  padding: 8px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+table td button {
+  margin-right: 6px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table td button:hover {
+  background-color: #eee;
+}
